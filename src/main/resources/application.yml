@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: minio
+minio:
+  servers:
+    1:
+      host: http://localhost:9000
+      access-key: minio
+      secret-key: minio
+      bucket-name: minio
+      public-path: ${minio.servers.1.host}/${minio.servers.1.bucket-name}
+      alias: 1
+  in-rotation: 1
